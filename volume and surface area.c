@@ -1,21 +1,26 @@
 /*
-Name:peter
-Reg:CT100/G/26164/25
-desc:volume of a cylinder
+Name: Peter
+Reg: CT100/G/26164/25
+Desc: Volume and Surface Area of a Cylinder
 */
-#include<stdio.h>
+#include <stdio.h>
+#define PI 3.142  // Define constant for Pi
 
 int main()
 {
-float radius,height,volume,π,area;
-printf("enter radius :");
-scanf("%f",  &radius);
+    float radius, height, volume, area;
 
-printf("enter height : ");
-scanf("%f",  &height);
+    printf("Enter radius: ");
+    scanf("%f", &radius);
 
-volume=3.142*radius*radius*height;
-area=2*3.142*radius*radius+2*3.142*radius*height;
+    printf("Enter height: ");
+    scanf("%f", &height);
 
-return 0;
+    volume = PI * radius * radius * height;
+    area   = 2 * PI * radius * radius + 2 * PI * radius * height;
+
+    printf("\nVolume of the cylinder: %.2f\n", volume);
+    printf("Surface area of the cylinder: %.2f\n", area);
+
+    return 0;
 }
